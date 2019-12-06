@@ -1,13 +1,14 @@
 package com.github.grishberg.layout.parser;
 
-import java.util.Enumeration;
+import java.util.List;
 
 public interface Node {
-    int childCount();
 
-    Enumeration<Node> children();
+    List<Node> children();
 
     Node childAt(int index);
+
+    int childCount();
 
     String name();
 
@@ -22,7 +23,7 @@ public interface Node {
         }
 
         @Override
-        public Enumeration<Node> children() {
+        public List<Node> children() {
             return null;
         }
 
